@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-3.14.0.min.css" />
+  <title>Posts stylised as cards</title>
+  <style>
+    .p-separator {
+      margin-top: 0.6rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .row {
+      margin-top: 2rem;
+    }
+
+    .p-card--highlighted {
+      position: relative;
+      opacity: 0;
+      transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+    }
+
+    .p-card--highlighted:hover {
+      transform: translateY(30px);
+    }
+
+  
+
+    .col-4.show .p-card--highlighted {
+      opacity: 1;
+    }
+
+    .p-card--highlighted {
+    height: 500px;
+}
+    .p-card--highlighted::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 3px;
+      background-color: #a87ca0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Use a header element to define the page header -->
+  <header class="p-strip">
+    <div class="row">
+      <h1 class="p-heading--two">Posts stylised as cards</h1>
+    </div>
+  </header>
+  
+  <!-- Use a main element to define the main content of the page -->
+  <main class="p-strip is-shallow">
+    <!-- Use a section element to define a thematic grouping of content -->
+    <section class="row" id="root"></section>
+  </main>
+
+  <!-- Use a footer element to define the page footer -->
+  <footer class="p-strip is-shallow">
+    <div class="row">
+      <p class="p-muted-heading">Powered by WordPress and Vanilla</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
